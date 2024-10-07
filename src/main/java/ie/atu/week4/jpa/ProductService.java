@@ -8,11 +8,13 @@ import java.util.List;
 public class ProductService {
     private ProductRepository productRepository;
 
-    public ProductService (ProductRepository productRepository){
+    public ProductService(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
-    public List<Product> add(Product product){
+
+    public List<Product> add(Product product) {
         productRepository.save(product);
-        return  productRepository.findAll();
+        return productRepository.findAll();
     }
 }
+
